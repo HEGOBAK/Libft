@@ -6,7 +6,7 @@
 #    By: jchu <jchu@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 15:20:58 by jchu              #+#    #+#              #
-#    Updated: 2023/01/12 20:48:58 by jchu             ###   ########.fr        #
+#    Updated: 2023/01/16 11:50:05 by jchu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,19 +68,19 @@ AR			= ar rc
 FLAGS		= -Wall -Werror -Wextra
 
 $(NAME):
-	$(CC) $(FLAGS) -c $(SRCS) -I ./
-	$(AR) $(NAME) $(OBJS)
+			$(CC) $(FLAGS) -c $(SRCS) -I ./
+			$(AR) $(NAME) $(OBJS)
 
-all: $(NAME)
+all: 		$(NAME)
 
-bonus: $(NAME)
-	$(CC) $(FLAGS) -c $(BNS_SRCS) -I ./
-	$(AR) $(NAME) $(BNS_OBJS)
+bonus: 		$(NAME)
+			$(CC) $(FLAGS) -c $(BNS_SRCS) -I ./
+			$(AR) $(NAME) $(BNS_OBJS)
 
-fclean:
-	rm -f $(OBJS) $(BNS_OBJS) $(NAME)
+fclean:		clean
+			rm -f $(OBJS) $(BNS_OBJS) $(NAME)
 
-clean: clean
-	rm -f $(NAME)
+clean: 		
+			rm -f $(OBJS) $(BNS_OBJS)
 
-re: fclean all
+re: 		fclean all
