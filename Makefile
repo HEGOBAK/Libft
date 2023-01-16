@@ -6,7 +6,7 @@
 #    By: jchu <jchu@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 15:20:58 by jchu              #+#    #+#              #
-#    Updated: 2023/01/16 11:50:05 by jchu             ###   ########.fr        #
+#    Updated: 2023/01/16 15:03:55 by jchu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS		= ft_memset.c \
 			  ft_memchr.c \
 			  ft_memcmp.c \
 			  ft_strlen.c \
+			  ft_striteri.c\
 			  ft_strlcpy.c \
 			  ft_strlcat.c \
 			  ft_strchr.c \
@@ -77,7 +78,7 @@ bonus: 		$(NAME)
 			$(CC) $(FLAGS) -c $(BNS_SRCS) -I ./
 			$(AR) $(NAME) $(BNS_OBJS)
 
-fclean:		clean
+fclean:
 			rm -f $(OBJS) $(BNS_OBJS) $(NAME)
 
 clean: 		

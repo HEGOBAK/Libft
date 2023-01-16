@@ -6,7 +6,7 @@
 /*   By: jchu <jchu@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 15:20:19 by jchu              #+#    #+#             */
-/*   Updated: 2023/01/12 19:22:36 by jchu             ###   ########.fr       */
+/*   Updated: 2023/01/16 15:04:58 by jchu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,14 @@ int	count_strs(const char *s, char c)
 
 char	**ft_free(char **s, size_t idx)
 {
-	while (s[idx] != NULL && idx >= 0)
+	size_t	i;
+
+	i = 0;
+	while (i <= idx)
 	{
-		free(s[idx]);
-		s[idx] = NULL;
-		idx--;
+		free(s[i]);
+		s[i] = NULL;
+		i++;
 	}
 	free(s);
 	s = NULL;

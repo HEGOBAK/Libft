@@ -6,7 +6,7 @@
 /*   By: jchu <jchu@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 13:35:19 by jchu              #+#    #+#             */
-/*   Updated: 2023/01/12 16:30:41 by jchu             ###   ########.fr       */
+/*   Updated: 2023/01/16 12:32:40 by jchu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	idx;
 
 	idx = 0;
-	while (*s)
+	if (!s || !(*f))
+		return ;
+	while (s[idx])
 	{
-		(*f)(idx, *s);
-		s++;
+		(*f)(idx, &s[idx]);
+		idx++;
 	}
 }
